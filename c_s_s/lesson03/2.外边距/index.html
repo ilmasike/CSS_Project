@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--外边距的唯一妙用：居中元素-->
+    <!--
+    margin：0 上下左右
+    margin：0 1px   上下和左右
+    margin：0 1px 2px 3px  上右下左（顺时针）
+
+    内边距同理：padding
+
+    -->
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h2,h1,ul,li,a,body{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        h2{
+            font-size: 16px;
+            background-color: #ffb15c;
+            /*行高*/
+            line-height: 33px;
+        }
+
+        #box{
+            width: 300px;
+            /*height: 99px;*/
+            border:1px solid red;
+            /*margin: 0 270px;!*为了实现居中，两元素代表左右*!*/
+            margin: 0 auto;
+        }
+
+        form{
+            background-color: #71e0d9;
+        }
+        input{
+            border: 1px solid black;
+        }
+        div:nth-of-type(1){  /*div 的父级的第一个*/
+            border: 2px solid #e131e2;
+            padding: 10px 20px 30px 40px ;
+        }
+    </style>
+
+
+
+
+
+</head>
+<body>
+
+<div id="box">
+    <h2>会员登录</h2>
+
+    <form action="#" method="get"><!--method 默认是get-->
+        <div>
+            <span> 用户名：</span>
+            <input type="text"/>
+        </div>
+        <div>
+            <span> 密码：</span>
+            <input type="text"/>
+        </div>
+        <div>
+            <span> 邮箱：</span>
+            <input type="text"/>
+        </div>
+
+
+
+
+    </form>
+
+
+</div>
+
+
+</body>
+</html>

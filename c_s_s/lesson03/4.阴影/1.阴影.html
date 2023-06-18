@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--margin 0 auto: 居中的前提:
+    首先外部是块元素(div套起来)，且块元素有固定的宽度。
+    -->
+
+    <title>Title</title>
+    <style>
+        div{
+            margin:0 auto;
+            width: 200px;
+            height: 200px;
+            margin-top: 30px;
+            border: 10px solid red;
+            box-shadow: 100px 10px 200px yellow;/*坐标+模糊半径+颜色*/
+        }
+        img{
+            box-shadow: 100px 100px 100px #e28fda;
+            border-radius:500px;
+        }
+
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+<div>
+</div>
+<!--把图片居中：   1.首先外部是块元素，2.且块元素有固定的宽度。-->
+
+<div style="height: 2000px;width: 3400px; margin:0 auto;text-align: center ">
+<!--<div style="width: 1000px;height: 1400px;">   &lt;!&ndash;这里会发现，只是图片居中到外面块的中间，不是窗口的中间&ndash;&gt;-->
+    <img src="images/1.jpg"  alt="">
+</div>
+
+
+
+</body>
+</html>
+<!--
+1.这里只需要一个div下套一个img就好了
+2.div设置text-align:center   ,img设置border-radius:50%
+3.实际上margin：0 auto，设置的是模块在页面中的显示位置，而div没有设置模块宽度，所以是和浏览器一样宽
+4.而text-align：center  设置的是div模块中img的位置，
+text-align：center    和margin：0 auto，确实可以一块使用，但在这里是多此一举
+
+-->

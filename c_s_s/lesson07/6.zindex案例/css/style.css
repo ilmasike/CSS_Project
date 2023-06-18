@@ -1,0 +1,55 @@
+#content{
+    width: 500px;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 25px;
+    border: 3px solid #f80505;
+
+    /*
+      z-index: 999;   默认层级最低是0,999则一定在最上面
+      opacity:0.5；    透明度百分之五十
+
+    */
+
+}
+
+ul,li{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;/*去掉圆点*/
+}
+
+/*想让文字移动到图片上：相对定位*/
+#content ul{/*父级元素相对定位：子绝父相*/
+    position: relative;
+}
+.tipText,.tipBJ{/*文本进行绝对定位*/
+    width: 500px;
+    height: 25px;
+    position: absolute;
+    border: 1px solid #e131e2;
+    top: 273px;
+
+}
+.tipBJ{ /*给背景加点颜色*/
+    background-color: #000000;
+    /*设置透明度*/
+    opacity: 0.5;
+
+
+
+    /*过滤器:filter,相当于 opacity: 0.5;但是仅仅在IE8以及更早版本支持，已被淘汰*/
+    filter: alpha(opacity=50);
+
+}
+
+/*此时文字被覆盖：*/
+.tipText{
+    /*z-index: 0;*/
+    z-index: 999;/*默认层级最低是0,999则一定在最上面。最高无限制级别，999一般就够了*/
+    color: white;
+
+
+}

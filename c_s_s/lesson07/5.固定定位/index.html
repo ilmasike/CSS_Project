@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 1000px;
+
+        }
+        div:nth-of-type(1){/*div父级元素下面的第一个div*/
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            position: absolute;
+            right: 0;
+            bottom:0;/*绝对定位：没有父级元素的情况下，是相对于浏览器：浏览器的右下角*/
+
+        }
+
+        div:nth-of-type(2){
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            position: fixed;/*固定定位，比如网页添加好友窗口一直处在窗口的正中央等。比如返回顶部图标等*/
+            right: 0;
+            bottom:0;
+        }
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+<div>div1</div>
+<div>div2</div>
+
+</body>
+</html>

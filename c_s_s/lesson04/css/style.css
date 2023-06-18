@@ -1,0 +1,98 @@
+div {
+    margin:10px;
+    padding:5px;
+}
+#father {
+    border:1px #000 solid;
+
+    /*overflow: hidden;*/
+
+    /*然解决父级边框塌陷问题，怎么办？即标准文档流，浮动后都脱离了父级边框，那么怎么样能还留在父级边框
+    1.增加父级元素的高度（最low的，毕竟元素如果高度是固定的就很麻烦）
+    2.浮动元素后面加空div，即增加空div标签（缺点是代码中应该尽量避免空的div），和清楚浮动。
+            .clear{
+                 margin: 0;
+                 padding: 0;
+                clear: both;
+                }
+    3.给父级元素加上overflow自动溢出（这里用的是 overflow: hidden而不是 overflow: auto，因后者会显示滚动条）,
+    但是hidden的缺点就是，没有了滚动条，如果有文字必须拉滚动条才能看到的画，用hidden就没办法看到了
+    详细见lesson06：
+            #father{
+              overflow: hidden
+            }
+
+     4.父类中添加伪类（推荐使用）：这个跟办法2的浮动元素后面加空div是一样的效果。
+     只是不是在HTML中，
+    而是这里直接通过编程方式来实现了。好处是避免了在程序中增加div：
+            #father:after{}
+    */
+
+}
+
+
+/*#father{*/
+/*    overflow: hidden;*/
+/*}*/
+
+#father:after{  /*在father后面执行操作的意思*/
+    content: ''; /*在clear类后面添加内容为空，相当于增加空的div 的效果，只是不是在HTML中，
+    而是这里直接通过编程方式来实现了。好处是避免了在程序中增加div*/
+    display: block; /*把添加的内容转化为块元素*/
+    clear: both; /*清除这个元素两边的浮动*/
+
+
+    /*刚才是手动添加div，现在是自动添加，HTML文件不用再添加代码*/
+
+}
+
+
+
+.layer01 {
+    border:1px #F00 dashed;
+    display: inline-block;
+    float: left;
+    /*clear: both;*/
+}
+.layer02 {
+    border:1px #00F dashed;
+    display: inline-block;
+    float: left;
+    /*clear: both;*/
+}
+.layer03 {
+    border:1px #060 dashed;
+    display: inline-block;
+    float: right;
+    /*clear: both;*/
+}
+/*
+clear: right; 右侧不允许有浮动元素。假设有，就跑到下一行去。
+clear: left;  左侧不允许有浮动元素
+clear: both;  两侧不允许有浮动元素，变为块元素（常用）
+clear: none;
+*/
+.layer04 {
+    border:1px #666 dashed;
+    font-size:12px;
+    line-height:23px;
+    display: inline-block;
+    float: right;
+    clear: none;
+}
+
+.clear{
+    margin: 0;
+    padding: 0;
+    /*clear: both;*/
+    /*clear: both;*/
+}
+/*1.这里的清除浮动，是为了让后面的这些浮动元素，还在father的这个div大框里
+2.这个div是网页最末端，添加一个（原生）div进行：若有左右浮动，则在下行显示，因为div没有浮动
+所以（父级div）边框将（包裹他），他又是最末尾元素，故解决了塌陷
+3.下面不清的话， 本来图片是要浮动到下面的空间的，下面清除了浮动，下面清除了浮动，
+意思是不允许他浮动到下面，所以父级元素把他框起来了
+
+*/
+
+

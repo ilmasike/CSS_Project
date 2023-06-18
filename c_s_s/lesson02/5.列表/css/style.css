@@ -1,0 +1,47 @@
+#nav{
+    width:320px;
+    background: #889977;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: bold;
+    text-indent: 1em;/*缩进*/
+    line-height: 50px;
+    /*background: #cc1843;*/
+    /*background-image: url("");*/
+    background:red url("../images/d.gif") 275px  17px no-repeat;/*  背景颜色，图片，位置(xy轴)，平铺方式*/
+}
+
+/*ul   li*/
+/*list-style:none，去掉圆点/有序的数字
+list-style:circle  ：空心圆
+ list-style: decimal;有序数字
+  list-style: square;正方形
+
+*/
+
+ul{
+    background: #889977;
+}
+ul li{
+    height: 30px;
+    list-style: none;/*没有样式：把无序列表前面的点去掉*/
+    text-indent: 1em;
+    /*background:  url("../images/r.gif" ) 200px  7px no-repeat;*/
+    background-image: url("../images/r.gif");
+    background-repeat: no-repeat;
+    background-position: 200px  7px;
+
+}
+
+a:hover{
+    color: orange;
+    text-decoration: underline;/*悬浮会有下划线*/
+
+}
+a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #000000;
+}

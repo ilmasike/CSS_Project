@@ -1,0 +1,9 @@
+#content{
+    border: 5px solid black;
+    width: 150px;
+    height: 400px;
+    /*外面的div块显然是不够大， 我们希望在不够大的时候，有滚动条*/
+    /*overflow: auto;*/
+    overflow: hidden;  /* 相对于auto，通常选择用hidden。   */
+
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--变成行内元素，如果是快元素，则独占一行。现在变成行内元素，
+            则与下面的span共同占一行-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+    1.block:块元素，独占一行。
+    2.inline行内元素
+    3.inline-block：可以理解为既是块元素，也是行内元素：保持块元素特性，但是可以写在一行。
+    4.none消失
+    -->
+
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 400px;
+            border:5px solid red;
+            font-size: 40px;
+            /*把div部分，变成行元素,这样下面的span就可以与div同一行了*/
+            /*display: inline-block;!*这种写法，好像是页面展示有边距问题*!*/
+
+            display: inline;/*变成行内元素，如果是快元素，则独占一行。现在变成行内元素，
+            则与下面的span共同占一行*/
+        }
+        span{
+            width: 70px;
+            height: 500px;
+            border:5px solid red;
+            /*display: block;*/   /*变成块元素*/
+            display: inline-block;   /*变成是块元素，也是行元素*/
+            margin-top: 40px;
+            /*display: none;*/
+        }
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+<div>
+    div块元素
+</div>
+
+<span>span行内元素</span>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--对比下以前的id选择器的写法：发现属性选择器似乎更舒服-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .demo a{  /*后代选择器*/
+            float: left;/*左浮*/
+            display: block;/*块级元素*/
+            height: 50px;
+            width: 50px;
+            border-radius: 10px;/*圆角边框*/
+            background: dodgerblue;
+            text-align: center;/*文字居中对齐*/
+            color: rgba(0, 0, 0, 0.39);
+            text-decoration: none;/*没有下划线*/
+            margin-right:5px ;/*右边距*/
+            font:bold 20px/50px Arial;  /*字体 ：粗体 字体大小/行高  */
+            /*  =:绝对等于
+               *=：包含这个元素
+               ^=:以。。开头
+               $=:以。。结尾
+            */
+        }
+
+        /*题目：存在id属性的元素，选中
+        注意，属性选择器的格式：a[属性内容]{}
+        */
+        a[id]{/*a标签里带有id属性的*/
+            background: #ff7652;
+        }
+
+        a[id="first"]{/*id具体属性*/
+            background: #faff47;
+        }
+        /*对比下以前的id选择器的写法：发现属性选择器似乎更舒服*/
+        #first{
+            background: #ff7652;
+        }
+
+
+        /*选class属性中有link的元素*/
+        a[class*="links"]{
+            background: #3eff45;
+        }
+
+        /*选中href以http开头的元素*/
+        a[href^=http]{
+            background: #ffb15c;
+        }
+
+        /*选中href以pdf结尾的元素*/
+        a[href$=pdf]{
+            background: #374434;
+        }
+
+        a[href$=jpg]{
+            background: #420d44;
+        }
+    </style>
+</head>
+
+
+<body>
+<p class="demo">
+    <a href="https://www.baidu.com"  class="links item first" id="first">1</a>
+    <a href="https://www.jd.com"  class="links item active" target="_blank" title="test">2</a>
+    <a href="images/13.html"  class="links item">3</a>
+    <a href="images/13.png" class="links item">4</a>
+    <a href="images/13.jpg" class="links item">5</a>
+    <a href="abc">6</a>
+    <a href="/a.pdf">7</a>
+    <a href="/abc.pdf">8</a>
+    <a href="/abc.doc">9</a>
+    <a href="/abcd.doc" class="links item last">10</a>
+</p>
+
+
+</body>
+</html>

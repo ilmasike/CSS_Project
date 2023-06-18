@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--避免使用class、id选择器-->
+
+    <!--伪类：条件-->
+
+    <style>
+        /*题目：选中ul的第一个子元素*/
+        ul li:first-child {/*选中ul 下面的li标签，的第一个元素*/
+            background: #81e037;
+        }
+        /*题目：选中ul的最后一个子元素*/
+        ul li:last-child{
+            background: #ffb15c;
+        }
+
+        /*题目：只选中p1*/
+        /*定位到父元素，选择当前的第一个元素*/
+        /*按顺序*/
+        p:nth-child(1){      /*选中  当前p元素的  父级元素   的  第一个   元素,并且是当前元素才生效
+        或者说，p前面有个h1元素，就不再生效*/
+            /*这里解释一下，body是父级元素。如果“我是a标签”，
+            “tim”这两行没有被注释，则“我是a标签”是body的第一个元素，
+            且因不是p标签，就不再生效*/
+            background: #941ece;
+        }
+
+        p:nth-child(3){      /*这里生效*/
+            background: #316a0e;
+        }
+
+
+        /*按类型*/
+        p:nth-of-type(2){/*选择父元素里，第二个类型为p的元素.这里就有没有h1都不影响p*/
+            background: red;
+        }
+
+        a:hover{   /*鼠标放置，会变色*/
+            background: yellow;
+        }
+
+
+
+
+    </style>
+</head>
+
+
+
+<body>
+
+<!--<a href="">我是a标签</a>-->
+
+<!--<h1>tim</h1>-->
+<p>p1</p>
+<p>p2</p>
+<p>p3</p>
+<!--ul无序标签-->
+<ul>
+    <li>li1</li>
+    <li>li2</li>
+    <li>li3</li>
+
+</ul>
+
+
+
+</body>
+</html>

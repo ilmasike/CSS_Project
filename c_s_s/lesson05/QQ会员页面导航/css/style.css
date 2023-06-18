@@ -1,0 +1,95 @@
+/* 选择所有元素，并设置内边距和外边距为0 */
+* {
+	padding:0;
+	margin:0;
+}
+
+/* 链接样式：去掉下划线 */
+a {
+	text-decoration:none;
+}
+
+/* 导航头部样式：高度90像素，宽度100%，半透明黑色背景 */
+.nav-header {
+	height:90px;
+	width:100%;
+	background:rgba(0, 0, 0, .6);
+}
+
+/* 头部内容容器：宽度1180像素，高度90像素，居中对齐 */
+.head-contain {
+	width:1180px;
+	height:90px;
+	margin:0 auto;
+	text-align:center;
+}
+
+/* 顶部logo、导航、导航列表项、右侧内容框高度都设置为90像素，并使它们在一行上对齐 */
+.top-logo, .top-nav, .top-nav li, .top-right {
+	height:90px;
+	display:inline-block;
+	vertical-align:top;
+}
+
+/* 导航栏样式：左右间距为48像素 */
+.top-nav {
+	margin:0 48px;
+}
+
+/* 导航列表项样式：行高90像素，宽度90像素 */
+.top-nav li {
+	line-height:90px;
+	width:90px;
+}
+
+/* 导航链接样式：字体大小16像素，白色字体 */
+.top-nav li a {
+	display:block;
+	text-align:center;
+	font-size:16px;
+	color:#fff;
+}
+
+/* 鼠标悬停在导航链接上的样式：字体颜色为蓝色 */
+.top-nav li a:hover {
+	color:blue;
+}
+
+/* 右侧内容框样式：内边距顶部为25像素，圆角35像素 */
+.top-right a {
+	display:inline-block;
+	font-size:16px;
+	text-align:center;
+	margin-top:25px;
+	border-radius:35px;
+}
+
+/* 右侧第一个链接样式：宽93像素，高38像素，行高38像素，黄色字体和边框 */
+.top-right a:first-of-type {
+	width:93px;
+	height:38px;
+	line-height:38px;
+	color:#fad65c;
+	border:1px #fad65c solid;
+}
+
+/* 鼠标悬停在右侧第一个链接上的样式：字体颜色为深棕色，背景色为黄色 */
+.top-right a:first-of-type:hover {
+	color:#986b0d;
+	background:#fad65c;
+}
+
+/* 右侧最后一个链接样式：宽度140像素，高度40像素，粗体字体，背景色为黄色，字体颜色为深棕色 */
+.top-right a:last-of-type {
+	width:140px;
+	height:40px;
+	font-weight:700;
+	line-height:40px;
+	background:#fad65c;
+	color:#986b0d;
+}
+
+/* 鼠标悬停在右侧最后一个链接上的样式：背景色为浅黄色 */
+.top-right a:last-of-type:hover {
+	background:#fddc6c;
+}

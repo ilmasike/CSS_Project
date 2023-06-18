@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        /*边框：
+        border：粗细，样式（虚实线），颜色
+        */
+
+        /*body总有一个默认的外边距，margin=8px,所以可以这么做，常见操作：*/
+        /*body{*/
+        /*    margin: 0px;*/
+        /*}*/
+
+
+        h2,h1,ul,li,a,body{  /*都先给设置为none*/
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        #box{
+            width: 300px;
+            height: 250px;
+            border:1px solid red;   /*粗细，样式，颜色*/
+
+            /*padding: 0 0 0 0;*/
+            padding:0;/*内边距的上下左右 统一*/
+            /*padding: 1px 3px;!*内边距的上，左*!*/
+        }
+
+        form{
+            background-color: #71e0d9;
+        }
+        /*类型选择器*/
+        div:nth-of-type(1)>input{
+            border: 3px solid black;
+        }
+        div:nth-of-type(2)>input{
+            border: 3px dashed #e131e2;
+        }
+        div:nth-of-type(3)>input{
+            border: 3px solid #0be014;
+        }
+
+
+        h2{
+            font-size: 16px;
+            background-color: #ffb15c;
+            /*行高*/
+            line-height: 33px;
+        }
+    </style>
+
+
+
+
+
+</head>
+<body>
+
+<div id="box">
+    <h2>会员登录</h2>
+
+    <form action="#" method="get"><!--method 默认是get-->
+        <div>
+            <span> 用户名：</span>
+            <input type="text"/>
+        </div>
+        <div>
+            <span> 密码：</span>
+            <input type="text"/>
+        </div>
+        <div>
+            <span> 邮箱：</span>
+            <input type="text"/>
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>

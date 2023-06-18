@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*id选择器：必须保证唯一*/
+        #1111{
+            color: #81e037;
+        }
+        .woshishui{
+            color: red;
+
+        }
+        h1{
+            color: #0000FF;
+        }
+
+        /*结论：不遵循就近原则，而是固定的:  id选择器 >class > 标签选择器 */
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+<h1 class="woshishui">标题1</h1>
+<h1 class="woshishui" id="1111">标题1</h1>
+<!--结论：不遵循就近原则，而是固定的:  id选择器 >class > 标签选择器-->
+<h1>标题1</h1>
+<h1>标题1</h1>
+<h1>标题1</h1>
+<h1>标题1</h1>
+
+</body>
+</html>

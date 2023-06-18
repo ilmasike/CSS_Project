@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*1.不要有下划线*/
+        a{
+            text-decoration: none;
+            color: #cc1843;
+        }
+        /*超链接伪类：记住a;  a:hover即可*/
+
+        /*鼠标悬浮：放上去就能变颜色*/
+        a:hover{
+            color: #3eff45;
+            font-size: 30px;
+        }
+
+        /*激活：鼠标单击没有释放的时候*/
+        a:active{
+            color: #faff47;
+        }
+        /*!*点完以后会变成什么颜色*!*/
+        /*a:visited{*/
+        /*    color: #e131e2;*/
+        /*}*/
+
+
+        /*阴影：颜色+坐标位置*/
+        /*  text-shadow: 阴影颜色 水平偏移 垂直偏移 阴影半径;
+          */
+        #price{
+            text-shadow: #ff0027 10px 50px 1px;
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+<a href="#">
+    <img src="images/1.png" alt=""  height="200" width="250">
+</a>
+
+
+<p>
+    <a href="">《教父》</a>
+</p>
+<p><a href="">作者：杨红樱</a>
+</p>
+<p id="price">$99</p>
+
+
+
+</body>
+</html>

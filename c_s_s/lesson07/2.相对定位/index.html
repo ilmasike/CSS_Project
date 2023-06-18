@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--相对定位：相对于谁？相对于自己原来的位置进行偏移：position~-->
+
+
+    <style>
+        body{
+            padding: 20px;
+        }
+
+        div{
+            margin: 10px;
+            padding: 5px;
+            font-size: 12px;
+            line-height: 25px;
+        }
+        #father{
+            border: 1px solid red;
+            padding: 0px;
+        }
+
+        #first{
+            border: 1px dashed #9eff76;
+            background-color: #ffb15c;
+            position: relative;/*相对定位：上下左右。数值全部征程负数，就是上下左右移动*/
+            top:-20px;
+            left: 20px;/*右移：相当于距离原位置的左边20px*/
+        }
+
+        #second{
+            border: 1px dashed #4963ff;
+            background-color: #ff9036;
+        }
+
+        #third{
+            border: 1px dashed #ff32df;
+            background-color: #d4b7ff;
+            position: relative;
+            bottom: 10px;/*距离底部10px,也就是会上移*/
+            right: -50px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div  id="father">
+    <div id="first">第一个盒子</div>
+    <div id="second">第二个盒子</div>
+    <div id="third">第三个盒子</div>
+
+</div>
+
+</body>
+</html>

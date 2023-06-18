@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            margin: 10px;
+            padding: 5px;
+            font-size: 12px;
+            line-height: 25px;
+        }
+        #father{
+            border: 1px solid red;
+            padding: 0px;
+        }
+
+        #first{
+            border: 1px dashed #9eff76;
+            background-color: #ffb15c;
+            /*1.使用了绝对定位的元素以它最近的一个“已经定位”的“祖先元素” 为基准进行偏移*/
+            position: relative;
+
+
+
+        }
+
+        #second{
+            border: 1px dashed #4963ff;
+            background-color: #ff9036;
+            position: absolute;/*绝对定位：
+           1.使用了绝对定位的元素以它最近的一个“已经定位”的“祖先元素” 为基准进行偏移
+2.如果没有已经定位的祖先元素，会以浏览器窗口为基准进行定位
+3.绝对定位的元素从标准文档流中脱离，这意味着它们对其他元素的定位不会造成影响
+4.元素位置发生偏移后，它原来的位置不会被保留下来
+
+            */
+            top: -10px;
+            right: -30px;
+
+
+        }
+
+        #third{
+            border: 1px dashed #ff32df;
+            background-color: #d4b7ff;
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div  id="father">
+    <div id="first">第一个盒子</div>
+    <div id="second">第二个盒子</div>
+    <div id="third">第三个盒子</div>
+
+</div>
+
+</body>
+</html>
